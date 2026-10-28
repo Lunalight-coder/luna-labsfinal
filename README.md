@@ -5,7 +5,7 @@ An interactive, space themed website dedicated to explore fascinating facts abou
 
 
  ### Try The Website: 
- **[Quick start: Click here to open the demo]()***
+ **[Quick start: Click here to open the demo](https://lunalight-coder.github.io/luna-labs/)**
 
  ### Core-features: 
  The website has 4 sections-
@@ -24,13 +24,14 @@ An interactive, space themed website dedicated to explore fascinating facts abou
   An interactive section with a flashcard animation. The front side shows a hook question, and the answer on the back will be revealed upon clicking.
 
  ### III-MiniCafe:
-   This section is non-interactive and contains information about chemical elements found in space that are also commonly found in food recipes.
+   This section is interactive and moves up when mouse hovers over it and contains information about chemical elements found in space that are also commonly found in food recipes.
 
  ### IV-About Me: 
- This section is short, containing brief information about me, keeping in mind the personal website theme . This section is also non-interactive.
+ This section is short, containing brief information about me, keeping in mind the personal website theme . This section is non-interactive.
 
  ### *Additional Information*:
  *Glitter Trail: The mouse cursor on this website has a glitter trail effect to enhance the experience.
+ *Title: The welcome title has a glitching effect when mouse hovers over the text.
 
  
 
