@@ -9,7 +9,7 @@ fetch(`https://api.nasa.gov/planetary/apod?api_key=` + API_KEY + "&date=2026-10-
     const imagesrc = data.hdurl || data.url;
 
     nasac.innerHTML=`
-    <h2 style="font-family:'Sans-serif'; margin-bottom:15px;">${data.title}</h2>
+    <h2 style="font-family:'Sans-serif'; margin-bottom:15px; color:white;">${data.title}</h2>
     <div style="width::100%; display:flex; justify-content:center;"> 
     <img src="${imagesrc}" alt="${data.title}"
     style="max-width:100%;
@@ -17,7 +17,7 @@ fetch(`https://api.nasa.gov/planetary/apod?api_key=` + API_KEY + "&date=2026-10-
     border-radius:8px;
     "/>
     </div>
-    <p style="margin-top:30pxx;"> ${data.explanation}</p>`;
+    <p style="margin-top:30px; color:white;"> ${data.explanation}</p>`;
 })
 .catch(err => {
     nasac.innerHTML="<p>Error! I dunno , ask aliens about it >u0</p>";
