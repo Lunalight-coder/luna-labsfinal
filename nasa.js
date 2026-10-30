@@ -19,7 +19,7 @@ fetch(`https://api.nasa.gov/planetary/apod?api_key=` + API_KEY + "&date=2026-10-
     </div>
     <p style="margin-top:30px; color:white;"> ${data.explanation}</p>`;
 })
-.catch(err => {
+.catch(err => {  
     nasac.innerHTML="<p>Error! I dunno , ask aliens about it >u0</p>";
     console.error(err);
 });
