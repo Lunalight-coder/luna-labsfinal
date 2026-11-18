@@ -1,18 +1,16 @@
 import { defineConfig } from 'vite'
-import{resolve} from 'path'
-import { fileURLToPath } from 'url'
+import { resolve } from 'path'
 
-
-const __dirname = fileURLToPath(new URL('.', import.meta.url))
 export default defineConfig({
-    base: './',
+  base: '/luna-labsfinal/',
   build: {
-    rollupOptions:{
-        input:{
+    rollupOptions: {
+      input: {
         main: resolve(__dirname, 'index.html'),
         nasa: resolve(__dirname, 'nasa.html'),
         novel: resolve(__dirname, 'novel.html'),
+        crater: resolve(__dirname, 'crater.html'),
+      },
     },
-},
   },
 })
