@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crater Logs - Luna's Lobby</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="crater.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+
+    <style>
+        h1, h2, h3, .expand-hint {
+            font-family: 'Orbitron', sans-serif !important;
+            letter-spacing: 2px;
+        }
+        p, li, a, span {
+            font-family: "Fuzzy Bubbles", sans-serif !important;
+            font-weight: bolder;
+        }
+        hr.line {
+            height: 12px;
+            background-color: #e5f23482;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glitter-container">
+        <div class="star star1"></div>
+        <div class="star star2"></div>
+        <div class="star star3"></div>
+        <div class="star star4"></div>
+        <div class="star star5"></div>
+    </div>
+
+    <a href="index.html" class="back-btn">&larr; Back to Lobby</a>
+
+    <header class="crater-header">
+        <h1>Crater Logs</h1>
+        <p></p>
+    </header>
+
+    <hr class="line">
+
+    <!-- BLOG FEED CONTAINER -->
+    <main class="crater-blog-container">
+
+        <!-- CRATER LOG 1 -->
+        <article class="crater-card" onclick="toggleLog(this)">
+            <div class="crater-card-top">
+                <h2>Crater Log #1</h2>
+                <span class="log-date">99/99/6767</span>
+            </div>
+            <h3 class="log-title">'PAPER'</h3>
+            <div class="log-content">
+                <p>Humans... adorable.. but confusing, a LOT! They sometimes do things that 
+                    doesn't make sense at all. For example, i saw some humanlings.. if thats what they call them!? Write a whole 3 page essay on saving trees.. and guess what they wrote it on paper*... They draw posters about saving trees, yeah u guessed it <b>ON PAPER</b>
+                    and to all my alien bros and sis out there , if u r trying to find connection between trees and paper,well.. paper is just shredded tree... Yeah, thats it for today. See u next time after i recover from.. whatever this is <span class="crater-out">XXX Crater Out XXX</span>
+                </p>
+            </div>
+            <div class="expand-hint">[ Click to Unlock & Scroll Log ]</div>
+        </article>
+
+        <!-- CRATER LOG 2 -->
+        <article class="crater-card" onclick="toggleLog(this)">
+            <div class="crater-card-top">
+                <h2>Crater Log #2</h2>
+                <span class="log-date">32/13/6767</span>
+            </div>
+            <h3 class="log-title">'UNIVERSE'</h3>
+            <div class="log-content">
+                <p>These earthlings.. I cant! So, basically yesterday while i was fixing my transmitter, i saw an earthling running across the recreational tree reserve (which humans call park) shouting at another earthling on an outdated wireless communication enabling device (phone in earthlingian/earthlingese i guess!?) Saying if i dont finish my homework by tomorrow the world would end!<br> Excuse YOU!! What do you mean the world would end! Well you forgot that the universe doesnt run on your homework, and why in the world an earthling's homework would affect us Theians or our friends eridians?? These earthlings think the universe revolves around them, but let me talk, it doesnt. I was so flabbergasted i left my transmitter half fixed with its iridite cover lying on the table!!! Ugh. see ya next time after i complete my work, which IS actually important! <span class="crater-out">XXX Crater Out XXX</span>
+                </p>
+            </div>
+            <div class="expand-hint">[ Click to Unlock & Scroll Log ]</div>
+        </article>
+
+        <!-- CRATER LOG 3 -->
+        <article class="crater-card" onclick="toggleLog(this)">
+            <div class="crater-card-top">
+                <h2>Crater Log #3</h2>
+                <span class="log-date"></span>
+            </div>
+            <h3 class="log-title"> IN TRANSMISSION</h3>
+            <div class="log-content">
+                <p>01011001101100101001001001......................</p>
+            </div>
+            <div class="expand-hint">[ Click to Unlock & Scroll Log ]</div>
+        </article>
+
+    </main>
+
+    <script>
+        // Click card to unlock internal scrolling without changing card size
+        function toggleLog(card) {
+            card.classList.toggle('is-active');
+            const hint = card.querySelector('.expand-hint');
+            if (card.classList.contains('is-active')) {
+                hint.textContent = '[ Scroll Inside • Click to Lock ]';
+            } else {
+                hint.textContent = '[ Click to Unlock & Scroll Log ]';
+                card.querySelector('.log-content').scrollTop = 0;
+            }
+        }
+
+        // Alien Green & Yellow Glitter Mouse Trail
+        document.addEventListener('mousemove', function(e) {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'mouse-sparkle alien-sparkle';
+            sparkle.style.left = e.clientX + 'px';
+            sparkle.style.top = e.clientY + 'px';
+            
+            const size = Math.random() * 7 + 3;
+            sparkle.style.width = size + 'px';
+            sparkle.style.height = size + 'px';
+            
+            // Randomly alternate between neon green and alien yellow
+            const isGreen = Math.random() > 0.5;
+            sparkle.style.background = isGreen ? '#39ff14' : '#e5f234';
+            sparkle.style.boxShadow = isGreen 
+                ? '0 0 10px #39ff14, 0 0 20px #e5f234' 
+                : '0 0 10px #e5f234, 0 0 20px #39ff14';
+
+            document.body.appendChild(sparkle);
+            setTimeout(() => {
+                sparkle.remove();
+            }, 1000);
+        });
+    </script>
+
+</body>
+</html>
